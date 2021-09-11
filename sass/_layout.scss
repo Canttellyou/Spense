@@ -1,0 +1,811 @@
+////For the toolbar-text editor
+.ql-toolbar,
+.ql-snow {
+  font-family: "Cabin", sans-serif;
+  ///For the texts
+  .ql-picker {
+    ::before {
+      font-size: 1rem;
+    }
+  }
+}
+
+//navbar
+.container {
+  display: inline-block;
+  cursor: pointer;
+  display: none;
+  @include respond(phone) {
+    display: initial;
+  }
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+}
+////to hide the element
+//////
+.hide {
+  display: none;
+}
+///For the texteditor/////
+
+.celebrate {
+  background-color: black;
+  color: white;
+  font-size: 1.8em;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+
+  @include respond(desktop-min) {
+    flex-direction: column;
+    align-items: center;
+  }
+  @include respond(phone-mid) {
+    .launch {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+    }
+  }
+  padding: 1rem 0;
+  @include links;
+  margin-bottom: 0;
+}
+
+.getting-started {
+  background-color: $color-background;
+  padding: $padding-main;
+  @include respond(desktop-min) {
+    padding: $padding-min;
+  }
+  @include respond(phone) {
+    padding: 0 2rem;
+  }
+  position: relative;
+  ///For the first list
+  .info {
+    .menu-nav {
+      padding: 1rem;
+      @include links;
+      @include link-dec;
+      animation: slide 0.2s ease-in;
+      position: absolute;
+      width: 70%;
+      top: 0;
+      left: 0;
+      z-index: 10;
+      background-color: white;
+      font-size: 3rem;
+      border-radius: 5px;
+      border-bottom: 10px solid black;
+      .sign-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        border: none;
+        button {
+          margin-top: 1rem;
+        }
+        p {
+          width: 100%;
+          border-bottom: 1px solid black;
+        }
+      }
+      & > * {
+        border-bottom: 1px solid black;
+      }
+      .business {
+        margin-top: 2rem;
+      }
+    }
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .spense {
+      p {
+        @include links;
+        @include link-dec;
+        &:active {
+          @include transform;
+        }
+        font-weight: 700;
+      }
+      font-size: 2rem;
+    }
+    .list {
+      font-size: 1.8rem;
+      @include respond(phone) {
+        display: none;
+      }
+      ul {
+        display: flex;
+        list-style: none;
+        text-decoration: none;
+        li {
+          @include links;
+          @include link-dec;
+          &:active {
+            @include transform;
+          }
+        }
+        :not(:last-child) {
+          margin-right: 2rem;
+        }
+      }
+    }
+  }
+}
+.sign {
+  display: flex;
+  align-items: center;
+
+  :not(:last-child) {
+    margin-right: 2rem;
+  }
+  .login {
+    @include respond(phone) {
+      display: none;
+    }
+    @include links;
+    @include link-dec;
+    &:active {
+      @include transform;
+    }
+  }
+  @include respond(tab-large) {
+    .btn-email {
+      font-size: 1.5rem;
+      padding: 1rem 1.2rem;
+    }
+  }
+  @include respond(tab-large) {
+    .btn-email {
+      font-size: 1.7rem;
+      padding: $padding-butts;
+    }
+  }
+  button {
+    text-decoration: none;
+    border: none;
+    background-color: black;
+    color: white;
+    font-family: inherit;
+    font-size: 1.7rem;
+    padding: $padding-butts;
+    @include respond(tab-large) {
+      padding: $padding-butts-min;
+    }
+
+    border-radius: 5px;
+    cursor: pointer;
+    @include links;
+    @include link-dec;
+    &:active {
+      @include transform;
+    }
+  }
+}
+////first bnt
+.sign-1 {
+  @include respond(phone) {
+    display: none;
+  }
+}
+
+.mail {
+  padding: $padding-main;
+  @include respond(desktop-min) {
+    padding: $padding-min;
+  }
+  @include respond(phone) {
+    padding: 0 2rem;
+  }
+  display: flex;
+  justify-content: space-between;
+  @include respond(phone-ext-large) {
+    flex-direction: column-reverse;
+    width: 100%;
+  }
+  margin-top: 4rem;
+
+  .unfiltered {
+    margin-top: 3rem;
+    padding-right: 1rem;
+
+    //big text Share....
+    .share {
+      color: black;
+      opacity: 0.8;
+      font-size: 5.5rem;
+      @include respond(desktop-min) {
+        font-size: 5rem;
+      }
+      @include respond(tab-large) {
+        font-size: 4rem;
+      }
+      @include respond(tab-small) {
+        font-size: 3rem;
+      }
+      @include respond(phone-ext-large) {
+        font-size: 5rem;
+      }
+      @include respond(phone-small) {
+        font-size: 3rem;
+      }
+      font-weight: 700;
+      line-height: 1.2;
+    }
+    .overview {
+      font-size: 1.7rem;
+      @include respond(desktop-min) {
+        font-size: 1.6rem;
+      }
+      @include respond(tab-large) {
+        font-size: 1.5rem;
+      }
+      @include respond(phone-ext-large) {
+        font-size: 1.8rem;
+      }
+      color: grey;
+      font-weight: 500;
+      .discuss {
+        span {
+          font-style: italic;
+        }
+      }
+    }
+  }
+  ///For the checkcircles
+  .check-box {
+    margin-top: 1rem;
+    ul {
+      :not(:last-child) {
+        margin-bottom: 0.5rem;
+      }
+    }
+    .check {
+      display: flex;
+      align-items: center;
+      font-size: 1.7rem;
+      @include respond(tab-large) {
+        font-size: 1.5rem;
+      }
+      @include respond(phone-ext-large) {
+        font-size: 1.7rem;
+      }
+      list-style: none;
+      text-decoration: none;
+      font-weight: 700;
+      p {
+        color: black;
+        opacity: 0.7;
+      }
+      :not(:last-child) {
+        margin-right: 2rem;
+      }
+    }
+  }
+  .input {
+    display: flex;
+
+    .ins {
+      display: flex;
+      @include respond(phone) {
+        flex-direction: column;
+      }
+      .sign {
+        @include respond(phone) {
+          margin-top: 1rem;
+        }
+      }
+    }
+    position: relative;
+    align-items: center;
+    margin-top: 2rem;
+    :not(:last-child) {
+      margin-right: 2rem;
+    }
+    form {
+      display: flex;
+    }
+    .email {
+      .example {
+        border: none;
+        border: 2px solid $color-input;
+        border-radius: 5px;
+        padding: $padding-butts;
+
+        @include respond(tab-min) {
+          padding: 1rem 1.2rem;
+        }
+        @include respond(phone-ext-large) {
+          padding: $padding-butts;
+        }
+        &::placeholder {
+          font-family: inherit;
+          font-size: 1.7rem;
+          @include respond(tab-small) {
+            font-size: 1.5rem;
+          }
+          @include respond(phone-mid) {
+            font-size: 1.7rem;
+          }
+          color: $color-input;
+          font-weight: 500;
+        }
+        &:focus {
+          outline: none;
+          &:invalid {
+            border: 2px solid red;
+          }
+          &:valid {
+            border: 2px solid black;
+          }
+        }
+      }
+    }
+  }
+
+  .image {
+    position: relative;
+    .withdraw {
+      position: absolute;
+      top: 2rem;
+      left: 2rem;
+      background-color: white;
+      font-size: 1.8rem;
+      font-weight: 600;
+      padding: 2rem;
+      @include respond(phone-ext-large) {
+        font-size: 3rem;
+        top: 3rem;
+        left: 4rem;
+        padding: 2.5rem;
+      }
+      @include respond(phone-mid) {
+        top: 2.5rem;
+        left: 3rem;
+      }
+      @include respond(phone-small) {
+        font-size: 1.5rem;
+        left: 2rem;
+      }
+      display: inline-block;
+      border-radius: 10px;
+      .month {
+        padding-bottom: 1rem;
+        border-bottom: 1px solid $color-input;
+      }
+      .amount {
+        margin-top: 1rem;
+      }
+      .btn {
+        margin-top: 1rem;
+        button {
+          @include btn;
+          padding: 1.7rem 4rem;
+          @include respond(tab-min) {
+            padding: 1.2rem 3rem;
+          }
+          @include respond(phone-ext-large) {
+            font-size: 2rem;
+            padding: 1.7rem 8rem;
+          }
+          @include respond(phone-small) {
+            font-size: 1.5rem;
+            padding: 1rem 3rem;
+          }
+        }
+      }
+    }
+    img {
+      width: 40rem;
+      @include respond(tab-large) {
+        width: 35rem;
+      }
+      @include respond(phone-ext-large) {
+        width: 100%;
+        height: 60rem;
+      }
+      @include respond(phone) {
+        height: 50rem;
+      }
+    }
+  }
+}
+.social-secure {
+  background-color: white;
+  margin-top: 6rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .edit {
+    ///For the x button
+    .close-modal {
+      position: absolute;
+      top: 1rem;
+      right: 1.5rem;
+      font-size: 3rem;
+      color: #333;
+      cursor: pointer;
+      border: none;
+      background: none;
+      @include respond(phone-small) {
+        top: 0.5rem;
+      }
+      &:hover {
+        color: grey;
+      }
+    }
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+
+    background-color: white;
+    padding: 6rem;
+    border-radius: 5px;
+    box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+    z-index: 10;
+    @include respond(phone-small) {
+      padding: 7rem 1.5rem;
+      width: 85%;
+    }
+    #delta {
+      margin-top: 2rem;
+      display: flex;
+      justify-content: center;
+      button {
+        @include btn;
+        padding: 1.7rem 4rem;
+      }
+    }
+    #editor {
+      height: 10rem;
+      @include respond(phone-small) {
+        height: 20rem;
+      }
+    }
+  }
+  .social {
+    display: flex;
+    justify-content: space-between;
+    width: $width-sides;
+    @include respond(desktop-min) {
+      width: $width-sides-min;
+    }
+    .image {
+      &-4,
+      &-5,
+      &-6,
+      &-6,
+      &-7,
+      &-8 {
+        @include respond(phone-mid) {
+          display: none;
+        }
+      }
+    }
+
+    img {
+      height: 10%;
+      width: 9.8%;
+      @include respond(phone-mid) {
+        height: 10%;
+        width: 30%;
+      }
+    }
+    margin-top: 4rem;
+  }
+  .escrow {
+    width: $width-sides;
+    @include respond(desktop-min) {
+      width: $width-sides-min;
+    }
+
+    display: flex;
+    margin-top: 6rem;
+    padding: 7% 5%;
+
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: $color-background;
+    @include respond(tab-large) {
+      width: 100%;
+      border-radius: 0;
+      margin-top: 3rem;
+    }
+    @include respond(phone-mid) {
+      flex-direction: column;
+      padding: 0 7%;
+      width: 90%;
+      border-radius: 10px;
+    }
+  }
+  .phone-1 {
+    @include respond(tab-small) {
+      display: none;
+    }
+    position: absolute;
+    bottom: -1rem;
+    img {
+      width: 100%;
+    }
+  }
+  .phone-2 {
+    display: none;
+    @include respond(tab-small) {
+      display: initial;
+    }
+    position: absolute;
+    @include respond(phone-mid) {
+      position: initial;
+    }
+    bottom: -1rem;
+    right: 0;
+    img {
+      width: 100%;
+    }
+  }
+  ////////////////////
+  .secure {
+    width: 50%;
+    &-2 {
+      @include respond(phone-large) {
+        width: 100%;
+      }
+    }
+    @include respond(phone-mid) {
+      margin-top: 3rem;
+      width: 100%;
+    }
+    @include respond(phone-small) {
+      margin-top: 1rem;
+    }
+    .payments {
+      &-1 {
+        @include respond(phone-mid) {
+          font-size: 5rem;
+        }
+        @include respond(phone-small) {
+          font-size: 3rem;
+          margin-top: 2rem;
+        }
+      }
+      font-size: 3.5rem;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+    .persuade {
+      .second {
+        display: none;
+        @include respond(phone-mid) {
+          display: initial;
+        }
+      }
+      .first {
+        @include respond(phone-mid) {
+          display: none;
+        }
+      }
+
+      &-1 {
+        @include respond(phone-mid) {
+          font-size: 2.3rem;
+        }
+        @include respond(phone-small) {
+          font-size: 2rem;
+        }
+      }
+      margin-top: 1rem;
+      font-size: 1.7rem;
+      font-weight: 500;
+      color: grey;
+    }
+    .learn {
+      font-size: 2rem;
+      @include respond(phone-ext-large) {
+        font-size: 1.8rem;
+      }
+      &-1 {
+        @include respond(phone-mid) {
+          margin-top: 2rem;
+          font-size: 2.2rem;
+        }
+        @include respond(phone-mid) {
+          font-size: 2.4rem;
+        }
+        @include respond(phone-small) {
+          font-size: 2rem;
+        }
+      }
+      font-weight: 600;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.8);
+      display: inline-block;
+      color: rgb(0, 0, 0);
+      opacity: 0.8;
+      @include links;
+      @include link-dec;
+
+      &:active {
+        @include transform;
+      }
+    }
+  }
+  .sample {
+    margin-top: 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem 0;
+    width: $width-sides;
+    @include respond(desktop-min) {
+      width: $width-sides-min;
+    }
+    @include respond(phone-large) {
+      flex-direction: column-reverse;
+      align-items: initial;
+    }
+  }
+  .vid-part {
+    padding: 1.9rem 5rem;
+    box-shadow: 0 20rem 10rem rgba(0, 0, 0, 0.07);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .vid {
+      @include respond(phone-large) {
+        margin-top: 1rem;
+      }
+    }
+    .create {
+      font-size: 2rem;
+      text-align: center;
+    }
+    .quills {
+      font-size: 1.2rem;
+    }
+    .start {
+      margin-top: 1rem;
+    }
+  }
+}
+///////////For the text editor about
+.text-edit {
+  @include respond(desktop-min) {
+    padding: 3rem;
+  }
+  @include respond(phone-small) {
+    padding: 1rem;
+  }
+}
+//////Last Part
+.last-part {
+  width: 100%;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+  @include respond(phone-mid) {
+    font-size: 3rem;
+  }
+  @include respond(phone-small) {
+    font-size: 2rem;
+  }
+  margin-top: 3rem;
+  padding: 3rem 0;
+  .last__2,
+  .last__3,
+  .last__4,
+  .last__5 {
+    @include respond(phone-mid) {
+      display: none;
+    }
+  }
+  .last-second {
+    display: none;
+    @include respond(phone-mid) {
+      display: initial;
+      display: grid;
+      grid-template-columns: repeat(2, 50%);
+      grid-template-rows: repeat(1);
+      .second__2 {
+        margin-left: 15%;
+      }
+    }
+  }
+  @include respond(phone-ext-large) {
+    margin-top: 1rem;
+  }
+  .content {
+    display: flex;
+
+    width: $width-sides;
+    @include respond(desktop-min) {
+      width: $width-sides-min;
+    }
+    @include respond(phone-mid) {
+      flex-direction: column;
+    }
+    & > * {
+      margin-right: 6%;
+      @include respond(tab-min) {
+        margin-right: 4%;
+      }
+      @include respond(phone-ext-large) {
+        margin-right: 2%;
+      }
+    }
+  }
+  .last {
+    margin-top: 2rem;
+
+    .about {
+      &__spense {
+        font-weight: 700;
+      }
+      &__main {
+        margin-top: 0.5rem;
+        font-size: 1.8rem;
+        @include respond(phone-mid) {
+          font-size: 2.2rem;
+        }
+        @include respond(phone-small) {
+          font-size: 1.8rem;
+        }
+        color: rgba(255, 255, 255, 0.5);
+        ul {
+          list-style: none;
+          @include links;
+          @include link-dec;
+          &:active {
+            @include transform;
+          }
+        }
+        .just {
+          font-style: italic;
+        }
+      }
+    }
+  }
+}

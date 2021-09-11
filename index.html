@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>Spence Landing Page</title>
+    <script src="//cdn.quilljs.com/1.3.6/quill.js"></script>
+    <script src="//cdn.quilljs.com/1.3.6/quill.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!-- Theme included stylesheets -->
+    <link href="//cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet" />
+    <link href="//cdn.quilljs.com/1.3.6/quill.bubble.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="overlay hide"></div>
+
+    <div class="celebrate">
+      <div class="launch">
+        🎉To celebrate Spense's launch, we will be waiving all fees for the
+        entire month of September.
+      </div>
+      <div class="earnings">
+        <a href="https://www.escrow.com/"
+          >You will be receiving 100% of the earnings.</a
+        >
+        🎉
+      </div>
+    </div>
+
+    <div class="getting-started">
+      <div class="info">
+        <div class="menu-nav hide">
+          <div class="business"><a href="#">Business</a></div>
+          <div class="pricing"><a href="#">Pricing</a></div>
+          <div class="features"><a href="#">Features</a></div>
+          <div class="sign sign-menu">
+            <p><a href="#">Login</a></p>
+            <button><a href="#">Get Started</a></button>
+          </div>
+        </div>
+        <div class="spense">
+          <p><a href="#">spense.</a></p>
+        </div>
+
+        <div class="list">
+          <ul>
+            <li class="business"><a href="#">Business</a></li>
+            <li class="pricing"><a href="#">Pricing</a></li>
+            <li class="features"><a href="#">Features</a></li>
+          </ul>
+        </div>
+        <div class="sign sign-1">
+          <p class="login"><a href="#">Login</a></p>
+          <button><a href="#">Get Started</a></button>
+        </div>
+        <div class="container" onclick="myFunction(this)">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mail">
+      <div class="unfiltered">
+        <div class="share">
+          <p>Share your unfiltered</p>
+          <p>thoughts.Get paid.</p>
+        </div>
+
+        <div class="overview">
+          <p>
+            Spence is an open platform for individuals to share their unfiltered
+            thoughts.
+          </p>
+          <p class="discuss">
+            Discuss the topics you love, and get paid for doing
+            <span>just</span> that.
+          </p>
+        </div>
+
+        <div class="check-box">
+          <ul>
+            <li class="check check-1">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 0C5.373 0 0 5.373 0 12C0 18.627 5.373 24 12 24C18.627 24 24 18.627 24 12C24 5.373 18.627 0 12 0ZM10.75 17.292L6.25 12.928L8.107 11.07L10.75 13.576L16.393 7.792L18.25 9.649L10.75 17.292Z"
+                  fill="black"
+                />
+              </svg>
+              <p>Receive 99% of the earnings.</p>
+            </li>
+            <li class="check check-2">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 0C5.373 0 0 5.373 0 12C0 18.627 5.373 24 12 24C18.627 24 24 18.627 24 12C24 5.373 18.627 0 12 0ZM10.75 17.292L6.25 12.928L8.107 11.07L10.75 13.576L16.393 7.792L18.25 9.649L10.75 17.292Z"
+                  fill="black"
+                />
+              </svg>
+              <p>Get paid via Debit Card,ACH,or PayPal.</p>
+            </li>
+            <li class="check check-3">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 0C5.373 0 0 5.373 0 12C0 18.627 5.373 24 12 24C18.627 24 24 18.627 24 12C24 5.373 18.627 0 12 0ZM10.75 17.292L6.25 12.928L8.107 11.07L10.75 13.576L16.393 7.792L18.25 9.649L10.75 17.292Z"
+                  fill="black"
+                />
+              </svg>
+              <p>Withdraw your earnings anytime.</p>
+            </li>
+          </ul>
+        </div>
+        <div class="input">
+          <form action="#">
+            <div class="ins">
+              <div class="email">
+                <input
+                  type="email"
+                  class="example"
+                  placeholder="john@example.com"
+                  required
+                />
+              </div>
+
+              <div class="sign sign-2">
+                <button class="btn-email" type="submit">
+                  <a href="#">Get Started</a>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="image">
+        <div class="withdraw">
+          <p class="month">April Earnings</p>
+          <p class="amount">$272.21</p>
+          <div class="btn">
+            <button><a href="https://www.escrow.com/">Withdraw</a></button>
+          </div>
+        </div>
+        <img src="Assets/Hero Image (Desktop).png" alt="" />
+      </div>
+    </div>
+    <div class="social-secure">
+      <div class="edit hide">
+        <button class="close-modal">&times;</button>
+
+        <div id="toolbar"></div>
+        <div id="editor"></div>
+        <div id="delta"><button>Save and post.</button></div>
+      </div>
+      <div class="social">
+        <img src="/Assets/Facebook Logo.png" alt="" class="image image-1" />
+        <img src="/Assets/Dribbble Logo.png" alt="" class="image image-2" />
+        <img src="/Assets/Youtube Logo.png" alt="" class="image image-3" />
+        <img src="/Assets/Pinterest Logo.png" alt="" class="image image-4" />
+        <img src="/Assets/Twitter Logo.png" alt="" class="image image-5" />
+        <img src="/Assets/Reddit Logo.png" alt="" class="image image-6" />
+        <img src="/Assets/Google Logo.png" alt="" class="image image-7" />
+        <img src="/Assets/Slack Logo.png" alt="" class="image image-8" />
+      </div>
+      <div class="escrow">
+        <div class="phone-1">
+          <img src="/Assets/phone.png" alt="" />
+        </div>
+
+        <div class="secure">
+          <div class="payments payments-1">
+            <p>Secure your money</p>
+            <p>with escrow.</p>
+          </div>
+          <div class="persuade persuade-1">
+            <p>Spense uses escrow to secure all payments.We believe</p>
+            <p>
+              Escrow offers the highest level of security for your payments,
+            </p>
+            <p>so you never need to worry about scams.</p>
+          </div>
+          <div class="learn learn-1">
+            <a href="https://www.escrow.com/"
+              >Learn more about Escrow &#8594;</a
+            >
+          </div>
+        </div>
+        <div class="phone-2">
+          <img src="/Assets/Phone Mockup (Mobile).png" alt="" />
+        </div>
+      </div>
+      <div class="sample">
+        <div class="vid-part">
+          <div class="create"><p>Create amazing content</p></div>
+          <div class="quills">
+            <p>
+              Using quill as our text editor,you're pulled into focus to create
+              the best writings.
+            </p>
+          </div>
+          <div class="vid">
+            <video width="250px" controls>
+              <source src="/Assets/Sample.mp4" type="video/mp4" />
+            </video>
+          </div>
+
+          <div class="sign start">
+            <button class="open-editor">Start Sharing</button>
+          </div>
+        </div>
+
+        <div class="secure text-edit secure-2">
+          <div class="payments payments-1">
+            <p>A text editor like no other.</p>
+          </div>
+          <div class="persuade persuade-1">
+            <div class="first">
+              <p>
+                Our text editor pulls you into focus mode with its simplistic
+              </p>
+              <p>Design and usability so you can put out your best writing.</p>
+            </div>
+            <div class="second">
+              <p>
+                Our text editor pulls you into focus mode with its simplistic
+                design and usability so you can put out your best writing.
+              </p>
+            </div>
+          </div>
+          <div class="learn learn-1">
+            <a href="https://www.quilljs.com/"
+              >Learn more about Quill &#8594;</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="last-part">
+        <div class="content">
+          <div class="last last__1">
+            <div class="about about__spense">spense.</div>
+            <div class="about about__main">
+              Spence is an open platform for individuals to share their
+              unfiltered thoughts. Discuss the topics you love, and get paid for
+              doing
+              <span class="just">just</span> that.
+            </div>
+          </div>
+          <div class="last-second">
+            <div class="last second__1">
+              <div class="about about__spense">Sitemap</div>
+              <div class="about about__main">
+                <ul>
+                  <li><a href="#">Homepage</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="last second__2">
+              <div class="about about__spense">Resources</div>
+              <div class="about about__main">
+                <ul>
+                  <li><a href="#">Support</a></li>
+                  <li><a href="#">Contact</a></li>
+                  <li><a href="#">FAQ</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="last-second">
+            <div class="last second__1">
+              <div class="about about__spense">Company</div>
+              <div class="about about__main">
+                <ul>
+                  <li><a href="#">About</a></li>
+                  <li><a href="#">Customers</a></li>
+                  <li><a href="#">Blog</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="last second__2">
+              <div class="about about__spense">Opportunities</div>
+              <div class="about about__main">
+                <ul>
+                  <li><a href="#">Jobs</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="last last__2">
+            <div class="about about__spense">Sitemap</div>
+            <div class="about about__main">
+              <ul>
+                <li><a href="#">Homepage</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="last last__3">
+            <div class="about about__spense">Resources</div>
+            <div class="about about__main">
+              <ul>
+                <li><a href="#">Support</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">FAQ</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="last last__4">
+            <div class="about about__spense">Company</div>
+            <div class="about about__main">
+              <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Customers</a></li>
+                <li><a href="#">Blog</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="last last__5">
+            <div class="about about__spense">Opportunities</div>
+            <div class="about about__main">
+              <ul>
+                <li><a href="#">Jobs</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

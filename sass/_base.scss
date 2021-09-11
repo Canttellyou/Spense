@@ -1,0 +1,119 @@
+@mixin respond($breakpoint) {
+  @if $breakpoint == desktop-min {
+    @media only screen and (max-width: 66em) {
+      @content;
+    }
+  } @else if $breakpoint == tab-large {
+    @media only screen and (max-width: 57em) {
+      @content;
+    }
+  } @else if $breakpoint == tab-min {
+    @media only screen and (max-width: 52.5em) {
+      @content;
+    }
+  } @else if $breakpoint == tab-small {
+    @media only screen and (max-width: 50.65em) {
+      @content;
+    }
+  } @else if $breakpoint == phone-ext-large {
+    @media only screen and (max-width: 48em) {
+      @content;
+    }
+  } @else if $breakpoint == phone-large {
+    @media only screen and (max-width: 46.875em) {
+      @content;
+    }
+  } @else if $breakpoint == phone-mid {
+    @media only screen and (max-width: 40em) {
+      @content;
+    }
+  } @else if $breakpoint == phone {
+    @media only screen and (max-width: 36em) {
+      @content;
+    }
+  } @else if $breakpoint == phone-small {
+    @media only screen and (max-width: 26.6em) {
+      @content;
+    }
+  }
+}
+
+$color-background: rgb(241, 241, 241);
+$padding-main: 0 11rem;
+$padding-min: 0 4rem;
+
+$color-input: rgb(206, 205, 205);
+$padding-butts: 1.7rem 3rem;
+$padding-butts-min: 1.2rem 2rem;
+$width-sides: 82%;
+$width-sides-min: 90%;
+@mixin links {
+  a:link,
+  a:active,
+  a:visited {
+    color: inherit;
+    font-family: inherit;
+  }
+}
+@mixin link-dec {
+  a:link,
+  a:active,
+  a:visited {
+    text-decoration: none;
+  }
+}
+@mixin transform {
+  transform: translateY(2px);
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+@mixin btn {
+  text-decoration: none;
+  border: none;
+  background-color: black;
+  color: white;
+  font-family: inherit;
+  font-size: 1.7rem;
+  border-radius: 5px;
+  cursor: pointer;
+  @include links;
+  @include link-dec;
+  &:active {
+    @include transform;
+  }
+}
+@keyframes slide {
+  0% {
+    opacity: 0;
+    transform: translateX(-5rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; //10px/16px=62.5%
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  width: 100%;
+  // height: 100%;
+  font-family: "Cabin", sans-serif;
+  background-color: $color-background;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 5;
+}
