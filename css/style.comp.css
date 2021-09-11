@@ -1,0 +1,769 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+@keyframes slide {
+  0% {
+    opacity: 0;
+    transform: translateX(-5rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  width: 100%;
+  font-family: "Cabin", sans-serif;
+  background-color: #f1f1f1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 5; }
+
+.ql-toolbar,
+.ql-snow {
+  font-family: "Cabin", sans-serif; }
+  .ql-toolbar .ql-picker ::before,
+  .ql-snow .ql-picker ::before {
+    font-size: 1rem; }
+
+.container {
+  display: inline-block;
+  cursor: pointer;
+  display: none; }
+  @media only screen and (max-width: 36em) {
+    .container {
+      display: initial; } }
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s; }
+
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px); }
+
+.change .bar2 {
+  opacity: 0; }
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px); }
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 5; }
+
+.hide {
+  display: none; }
+
+.celebrate {
+  background-color: black;
+  color: white;
+  font-size: 1.8em;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0;
+  margin-bottom: 0; }
+  @media only screen and (max-width: 66em) {
+    .celebrate {
+      flex-direction: column;
+      align-items: center; } }
+  @media only screen and (max-width: 40em) {
+    .celebrate .launch {
+      display: flex;
+      justify-content: center;
+      text-align: center; } }
+  .celebrate a:link,
+  .celebrate a:active,
+  .celebrate a:visited {
+    color: inherit;
+    font-family: inherit; }
+
+.getting-started {
+  background-color: #f1f1f1;
+  padding: 0 11rem;
+  position: relative; }
+  @media only screen and (max-width: 66em) {
+    .getting-started {
+      padding: 0 4rem; } }
+  @media only screen and (max-width: 36em) {
+    .getting-started {
+      padding: 0 2rem; } }
+  .getting-started .info {
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+    .getting-started .info .menu-nav {
+      padding: 1rem;
+      animation: slide 0.2s ease-in;
+      position: absolute;
+      width: 70%;
+      top: 0;
+      left: 0;
+      z-index: 10;
+      background-color: white;
+      font-size: 3rem;
+      border-radius: 5px;
+      border-bottom: 10px solid black; }
+      .getting-started .info .menu-nav a:link,
+      .getting-started .info .menu-nav a:active,
+      .getting-started .info .menu-nav a:visited {
+        color: inherit;
+        font-family: inherit; }
+      .getting-started .info .menu-nav a:link,
+      .getting-started .info .menu-nav a:active,
+      .getting-started .info .menu-nav a:visited {
+        text-decoration: none; }
+      .getting-started .info .menu-nav .sign-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        border: none; }
+        .getting-started .info .menu-nav .sign-menu button {
+          margin-top: 1rem; }
+        .getting-started .info .menu-nav .sign-menu p {
+          width: 100%;
+          border-bottom: 1px solid black; }
+      .getting-started .info .menu-nav > * {
+        border-bottom: 1px solid black; }
+      .getting-started .info .menu-nav .business {
+        margin-top: 2rem; }
+    .getting-started .info .spense {
+      font-size: 2rem; }
+      .getting-started .info .spense p {
+        font-weight: 700; }
+        .getting-started .info .spense p a:link,
+        .getting-started .info .spense p a:active,
+        .getting-started .info .spense p a:visited {
+          color: inherit;
+          font-family: inherit; }
+        .getting-started .info .spense p a:link,
+        .getting-started .info .spense p a:active,
+        .getting-started .info .spense p a:visited {
+          text-decoration: none; }
+        .getting-started .info .spense p:active {
+          transform: translateY(2px); }
+    .getting-started .info .list {
+      font-size: 1.8rem; }
+      @media only screen and (max-width: 36em) {
+        .getting-started .info .list {
+          display: none; } }
+      .getting-started .info .list ul {
+        display: flex;
+        list-style: none;
+        text-decoration: none; }
+        .getting-started .info .list ul li a:link,
+        .getting-started .info .list ul li a:active,
+        .getting-started .info .list ul li a:visited {
+          color: inherit;
+          font-family: inherit; }
+        .getting-started .info .list ul li a:link,
+        .getting-started .info .list ul li a:active,
+        .getting-started .info .list ul li a:visited {
+          text-decoration: none; }
+        .getting-started .info .list ul li:active {
+          transform: translateY(2px); }
+        .getting-started .info .list ul :not(:last-child) {
+          margin-right: 2rem; }
+
+.sign {
+  display: flex;
+  align-items: center; }
+  .sign :not(:last-child) {
+    margin-right: 2rem; }
+  @media only screen and (max-width: 36em) {
+    .sign .login {
+      display: none; } }
+  .sign .login a:link,
+  .sign .login a:active,
+  .sign .login a:visited {
+    color: inherit;
+    font-family: inherit; }
+  .sign .login a:link,
+  .sign .login a:active,
+  .sign .login a:visited {
+    text-decoration: none; }
+  .sign .login:active {
+    transform: translateY(2px); }
+  @media only screen and (max-width: 57em) {
+    .sign .btn-email {
+      font-size: 1.5rem;
+      padding: 1rem 1.2rem; } }
+  @media only screen and (max-width: 57em) {
+    .sign .btn-email {
+      font-size: 1.7rem;
+      padding: 1.7rem 3rem; } }
+  .sign button {
+    text-decoration: none;
+    border: none;
+    background-color: black;
+    color: white;
+    font-family: inherit;
+    font-size: 1.7rem;
+    padding: 1.7rem 3rem;
+    border-radius: 5px;
+    cursor: pointer; }
+    @media only screen and (max-width: 57em) {
+      .sign button {
+        padding: 1.2rem 2rem; } }
+    .sign button a:link,
+    .sign button a:active,
+    .sign button a:visited {
+      color: inherit;
+      font-family: inherit; }
+    .sign button a:link,
+    .sign button a:active,
+    .sign button a:visited {
+      text-decoration: none; }
+    .sign button:active {
+      transform: translateY(2px); }
+
+@media only screen and (max-width: 36em) {
+  .sign-1 {
+    display: none; } }
+
+.mail {
+  padding: 0 11rem;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4rem; }
+  @media only screen and (max-width: 66em) {
+    .mail {
+      padding: 0 4rem; } }
+  @media only screen and (max-width: 36em) {
+    .mail {
+      padding: 0 2rem; } }
+  @media only screen and (max-width: 48em) {
+    .mail {
+      flex-direction: column-reverse;
+      width: 100%; } }
+  .mail .unfiltered {
+    margin-top: 3rem;
+    padding-right: 1rem; }
+    .mail .unfiltered .share {
+      color: black;
+      opacity: 0.8;
+      font-size: 5.5rem;
+      font-weight: 700;
+      line-height: 1.2; }
+      @media only screen and (max-width: 66em) {
+        .mail .unfiltered .share {
+          font-size: 5rem; } }
+      @media only screen and (max-width: 57em) {
+        .mail .unfiltered .share {
+          font-size: 4rem; } }
+      @media only screen and (max-width: 50.65em) {
+        .mail .unfiltered .share {
+          font-size: 3rem; } }
+      @media only screen and (max-width: 48em) {
+        .mail .unfiltered .share {
+          font-size: 5rem; } }
+      @media only screen and (max-width: 26.6em) {
+        .mail .unfiltered .share {
+          font-size: 3rem; } }
+    .mail .unfiltered .overview {
+      font-size: 1.7rem;
+      color: grey;
+      font-weight: 500; }
+      @media only screen and (max-width: 66em) {
+        .mail .unfiltered .overview {
+          font-size: 1.6rem; } }
+      @media only screen and (max-width: 57em) {
+        .mail .unfiltered .overview {
+          font-size: 1.5rem; } }
+      @media only screen and (max-width: 48em) {
+        .mail .unfiltered .overview {
+          font-size: 1.8rem; } }
+      .mail .unfiltered .overview .discuss span {
+        font-style: italic; }
+  .mail .check-box {
+    margin-top: 1rem; }
+    .mail .check-box ul :not(:last-child) {
+      margin-bottom: 0.5rem; }
+    .mail .check-box .check {
+      display: flex;
+      align-items: center;
+      font-size: 1.7rem;
+      list-style: none;
+      text-decoration: none;
+      font-weight: 700; }
+      @media only screen and (max-width: 57em) {
+        .mail .check-box .check {
+          font-size: 1.5rem; } }
+      @media only screen and (max-width: 48em) {
+        .mail .check-box .check {
+          font-size: 1.7rem; } }
+      .mail .check-box .check p {
+        color: black;
+        opacity: 0.7; }
+      .mail .check-box .check :not(:last-child) {
+        margin-right: 2rem; }
+  .mail .input {
+    display: flex;
+    position: relative;
+    align-items: center;
+    margin-top: 2rem; }
+    .mail .input .ins {
+      display: flex; }
+      @media only screen and (max-width: 36em) {
+        .mail .input .ins {
+          flex-direction: column; } }
+      @media only screen and (max-width: 36em) {
+        .mail .input .ins .sign {
+          margin-top: 1rem; } }
+    .mail .input :not(:last-child) {
+      margin-right: 2rem; }
+    .mail .input form {
+      display: flex; }
+    .mail .input .email .example {
+      border: none;
+      border: 2px solid #cecdcd;
+      border-radius: 5px;
+      padding: 1.7rem 3rem; }
+      @media only screen and (max-width: 52.5em) {
+        .mail .input .email .example {
+          padding: 1rem 1.2rem; } }
+      @media only screen and (max-width: 48em) {
+        .mail .input .email .example {
+          padding: 1.7rem 3rem; } }
+      .mail .input .email .example::placeholder {
+        font-family: inherit;
+        font-size: 1.7rem;
+        color: #cecdcd;
+        font-weight: 500; }
+        @media only screen and (max-width: 50.65em) {
+          .mail .input .email .example::placeholder {
+            font-size: 1.5rem; } }
+        @media only screen and (max-width: 40em) {
+          .mail .input .email .example::placeholder {
+            font-size: 1.7rem; } }
+      .mail .input .email .example:focus {
+        outline: none; }
+        .mail .input .email .example:focus:invalid {
+          border: 2px solid red; }
+        .mail .input .email .example:focus:valid {
+          border: 2px solid black; }
+  .mail .image {
+    position: relative; }
+    .mail .image .withdraw {
+      position: absolute;
+      top: 2rem;
+      left: 2rem;
+      background-color: white;
+      font-size: 1.8rem;
+      font-weight: 600;
+      padding: 2rem;
+      display: inline-block;
+      border-radius: 10px; }
+      @media only screen and (max-width: 48em) {
+        .mail .image .withdraw {
+          font-size: 3rem;
+          top: 3rem;
+          left: 4rem;
+          padding: 2.5rem; } }
+      @media only screen and (max-width: 40em) {
+        .mail .image .withdraw {
+          top: 2.5rem;
+          left: 3rem; } }
+      @media only screen and (max-width: 26.6em) {
+        .mail .image .withdraw {
+          font-size: 1.5rem;
+          left: 2rem; } }
+      .mail .image .withdraw .month {
+        padding-bottom: 1rem;
+        border-bottom: 1px solid #cecdcd; }
+      .mail .image .withdraw .amount {
+        margin-top: 1rem; }
+      .mail .image .withdraw .btn {
+        margin-top: 1rem; }
+        .mail .image .withdraw .btn button {
+          text-decoration: none;
+          border: none;
+          background-color: black;
+          color: white;
+          font-family: inherit;
+          font-size: 1.7rem;
+          border-radius: 5px;
+          cursor: pointer;
+          padding: 1.7rem 4rem; }
+          .mail .image .withdraw .btn button a:link,
+          .mail .image .withdraw .btn button a:active,
+          .mail .image .withdraw .btn button a:visited {
+            color: inherit;
+            font-family: inherit; }
+          .mail .image .withdraw .btn button a:link,
+          .mail .image .withdraw .btn button a:active,
+          .mail .image .withdraw .btn button a:visited {
+            text-decoration: none; }
+          .mail .image .withdraw .btn button:active {
+            transform: translateY(2px); }
+          @media only screen and (max-width: 52.5em) {
+            .mail .image .withdraw .btn button {
+              padding: 1.2rem 3rem; } }
+          @media only screen and (max-width: 48em) {
+            .mail .image .withdraw .btn button {
+              font-size: 2rem;
+              padding: 1.7rem 8rem; } }
+          @media only screen and (max-width: 26.6em) {
+            .mail .image .withdraw .btn button {
+              font-size: 1.5rem;
+              padding: 1rem 3rem; } }
+    .mail .image img {
+      width: 40rem; }
+      @media only screen and (max-width: 57em) {
+        .mail .image img {
+          width: 35rem; } }
+      @media only screen and (max-width: 48em) {
+        .mail .image img {
+          width: 100%;
+          height: 60rem; } }
+      @media only screen and (max-width: 36em) {
+        .mail .image img {
+          height: 50rem; } }
+
+.social-secure {
+  background-color: white;
+  margin-top: 6rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .social-secure .edit {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    background-color: white;
+    padding: 6rem;
+    border-radius: 5px;
+    box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+    z-index: 10; }
+    .social-secure .edit .close-modal {
+      position: absolute;
+      top: 1rem;
+      right: 1.5rem;
+      font-size: 3rem;
+      color: #333;
+      cursor: pointer;
+      border: none;
+      background: none; }
+      @media only screen and (max-width: 26.6em) {
+        .social-secure .edit .close-modal {
+          top: 0.5rem; } }
+      .social-secure .edit .close-modal:hover {
+        color: grey; }
+    @media only screen and (max-width: 26.6em) {
+      .social-secure .edit {
+        padding: 7rem 1.5rem;
+        width: 85%; } }
+    .social-secure .edit #delta {
+      margin-top: 2rem;
+      display: flex;
+      justify-content: center; }
+      .social-secure .edit #delta button {
+        text-decoration: none;
+        border: none;
+        background-color: black;
+        color: white;
+        font-family: inherit;
+        font-size: 1.7rem;
+        border-radius: 5px;
+        cursor: pointer;
+        padding: 1.7rem 4rem; }
+        .social-secure .edit #delta button a:link,
+        .social-secure .edit #delta button a:active,
+        .social-secure .edit #delta button a:visited {
+          color: inherit;
+          font-family: inherit; }
+        .social-secure .edit #delta button a:link,
+        .social-secure .edit #delta button a:active,
+        .social-secure .edit #delta button a:visited {
+          text-decoration: none; }
+        .social-secure .edit #delta button:active {
+          transform: translateY(2px); }
+    .social-secure .edit #editor {
+      height: 10rem; }
+      @media only screen and (max-width: 26.6em) {
+        .social-secure .edit #editor {
+          height: 20rem; } }
+  .social-secure .social {
+    display: flex;
+    justify-content: space-between;
+    width: 82%;
+    margin-top: 4rem; }
+    @media only screen and (max-width: 66em) {
+      .social-secure .social {
+        width: 90%; } }
+    @media only screen and (max-width: 40em) {
+      .social-secure .social .image-4, .social-secure .social .image-5, .social-secure .social .image-6, .social-secure .social .image-6, .social-secure .social .image-7, .social-secure .social .image-8 {
+        display: none; } }
+    .social-secure .social img {
+      height: 10%;
+      width: 9.8%; }
+      @media only screen and (max-width: 40em) {
+        .social-secure .social img {
+          height: 10%;
+          width: 30%; } }
+  .social-secure .escrow {
+    width: 82%;
+    display: flex;
+    margin-top: 6rem;
+    padding: 7% 5%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: #f1f1f1; }
+    @media only screen and (max-width: 66em) {
+      .social-secure .escrow {
+        width: 90%; } }
+    @media only screen and (max-width: 57em) {
+      .social-secure .escrow {
+        width: 100%;
+        border-radius: 0;
+        margin-top: 3rem; } }
+    @media only screen and (max-width: 40em) {
+      .social-secure .escrow {
+        flex-direction: column;
+        padding: 0 7%;
+        width: 90%;
+        border-radius: 10px; } }
+  .social-secure .phone-1 {
+    position: absolute;
+    bottom: -1rem; }
+    @media only screen and (max-width: 50.65em) {
+      .social-secure .phone-1 {
+        display: none; } }
+    .social-secure .phone-1 img {
+      width: 100%; }
+  .social-secure .phone-2 {
+    display: none;
+    position: absolute;
+    bottom: -1rem;
+    right: 0; }
+    @media only screen and (max-width: 50.65em) {
+      .social-secure .phone-2 {
+        display: initial; } }
+    @media only screen and (max-width: 40em) {
+      .social-secure .phone-2 {
+        position: initial; } }
+    .social-secure .phone-2 img {
+      width: 100%; }
+  .social-secure .secure {
+    width: 50%; }
+    @media only screen and (max-width: 46.875em) {
+      .social-secure .secure-2 {
+        width: 100%; } }
+    @media only screen and (max-width: 40em) {
+      .social-secure .secure {
+        margin-top: 3rem;
+        width: 100%; } }
+    @media only screen and (max-width: 26.6em) {
+      .social-secure .secure {
+        margin-top: 1rem; } }
+    .social-secure .secure .payments {
+      font-size: 3.5rem;
+      font-weight: 700;
+      line-height: 1.2; }
+      @media only screen and (max-width: 40em) {
+        .social-secure .secure .payments-1 {
+          font-size: 5rem; } }
+      @media only screen and (max-width: 26.6em) {
+        .social-secure .secure .payments-1 {
+          font-size: 3rem;
+          margin-top: 2rem; } }
+    .social-secure .secure .persuade {
+      margin-top: 1rem;
+      font-size: 1.7rem;
+      font-weight: 500;
+      color: grey; }
+      .social-secure .secure .persuade .second {
+        display: none; }
+        @media only screen and (max-width: 40em) {
+          .social-secure .secure .persuade .second {
+            display: initial; } }
+      @media only screen and (max-width: 40em) {
+        .social-secure .secure .persuade .first {
+          display: none; } }
+      @media only screen and (max-width: 40em) {
+        .social-secure .secure .persuade-1 {
+          font-size: 2.3rem; } }
+      @media only screen and (max-width: 26.6em) {
+        .social-secure .secure .persuade-1 {
+          font-size: 2rem; } }
+    .social-secure .secure .learn {
+      font-size: 2rem;
+      font-weight: 600;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.8);
+      display: inline-block;
+      color: black;
+      opacity: 0.8; }
+      @media only screen and (max-width: 48em) {
+        .social-secure .secure .learn {
+          font-size: 1.8rem; } }
+      @media only screen and (max-width: 40em) {
+        .social-secure .secure .learn-1 {
+          margin-top: 2rem;
+          font-size: 2.2rem; } }
+      @media only screen and (max-width: 40em) {
+        .social-secure .secure .learn-1 {
+          font-size: 2.4rem; } }
+      @media only screen and (max-width: 26.6em) {
+        .social-secure .secure .learn-1 {
+          font-size: 2rem; } }
+      .social-secure .secure .learn a:link,
+      .social-secure .secure .learn a:active,
+      .social-secure .secure .learn a:visited {
+        color: inherit;
+        font-family: inherit; }
+      .social-secure .secure .learn a:link,
+      .social-secure .secure .learn a:active,
+      .social-secure .secure .learn a:visited {
+        text-decoration: none; }
+      .social-secure .secure .learn:active {
+        transform: translateY(2px); }
+  .social-secure .sample {
+    margin-top: 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem 0;
+    width: 82%; }
+    @media only screen and (max-width: 66em) {
+      .social-secure .sample {
+        width: 90%; } }
+    @media only screen and (max-width: 46.875em) {
+      .social-secure .sample {
+        flex-direction: column-reverse;
+        align-items: initial; } }
+  .social-secure .vid-part {
+    padding: 1.9rem 5rem;
+    box-shadow: 0 20rem 10rem rgba(0, 0, 0, 0.07);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    @media only screen and (max-width: 46.875em) {
+      .social-secure .vid-part .vid {
+        margin-top: 1rem; } }
+    .social-secure .vid-part .create {
+      font-size: 2rem;
+      text-align: center; }
+    .social-secure .vid-part .quills {
+      font-size: 1.2rem; }
+    .social-secure .vid-part .start {
+      margin-top: 1rem; }
+
+@media only screen and (max-width: 66em) {
+  .text-edit {
+    padding: 3rem; } }
+
+@media only screen and (max-width: 26.6em) {
+  .text-edit {
+    padding: 1rem; } }
+
+.last-part {
+  width: 100%;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+  margin-top: 3rem;
+  padding: 3rem 0; }
+  @media only screen and (max-width: 40em) {
+    .last-part {
+      font-size: 3rem; } }
+  @media only screen and (max-width: 26.6em) {
+    .last-part {
+      font-size: 2rem; } }
+  @media only screen and (max-width: 40em) {
+    .last-part .last__2,
+    .last-part .last__3,
+    .last-part .last__4,
+    .last-part .last__5 {
+      display: none; } }
+  .last-part .last-second {
+    display: none; }
+    @media only screen and (max-width: 40em) {
+      .last-part .last-second {
+        display: initial;
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+        grid-template-rows: repeat(1); }
+        .last-part .last-second .second__2 {
+          margin-left: 15%; } }
+  @media only screen and (max-width: 48em) {
+    .last-part {
+      margin-top: 1rem; } }
+  .last-part .content {
+    display: flex;
+    width: 82%; }
+    @media only screen and (max-width: 66em) {
+      .last-part .content {
+        width: 90%; } }
+    @media only screen and (max-width: 40em) {
+      .last-part .content {
+        flex-direction: column; } }
+    .last-part .content > * {
+      margin-right: 6%; }
+      @media only screen and (max-width: 52.5em) {
+        .last-part .content > * {
+          margin-right: 4%; } }
+      @media only screen and (max-width: 48em) {
+        .last-part .content > * {
+          margin-right: 2%; } }
+  .last-part .last {
+    margin-top: 2rem; }
+    .last-part .last .about__spense {
+      font-weight: 700; }
+    .last-part .last .about__main {
+      margin-top: 0.5rem;
+      font-size: 1.8rem;
+      color: rgba(255, 255, 255, 0.5); }
+      @media only screen and (max-width: 40em) {
+        .last-part .last .about__main {
+          font-size: 2.2rem; } }
+      @media only screen and (max-width: 26.6em) {
+        .last-part .last .about__main {
+          font-size: 1.8rem; } }
+      .last-part .last .about__main ul {
+        list-style: none; }
+        .last-part .last .about__main ul a:link,
+        .last-part .last .about__main ul a:active,
+        .last-part .last .about__main ul a:visited {
+          color: inherit;
+          font-family: inherit; }
+        .last-part .last .about__main ul a:link,
+        .last-part .last .about__main ul a:active,
+        .last-part .last .about__main ul a:visited {
+          text-decoration: none; }
+        .last-part .last .about__main ul:active {
+          transform: translateY(2px); }
+      .last-part .last .about__main .just {
+        font-style: italic; }
